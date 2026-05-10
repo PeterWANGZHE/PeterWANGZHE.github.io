@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王喆的摄影作品集</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            background:#f4f5f7;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",sans-serif;
+            padding:40px 20px;
+        }
+        .wrap{max-width:1100px;margin:0 auto;}
+        .top{text-align:center;margin-bottom:50px;}
+        .top h1{font-size:36px;color:#222;margin-bottom:12px;}
+        .top p{color:#666;font-size:16px;}
+
+        .list{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+            gap:28px;
+        }
+
+        .item{
+            background:#fff;
+            border-radius:16px;
+            overflow:hidden;
+            box-shadow:0 4px 14px rgba(0,0,0,0.07);
+            transition:all 0.3s;
+            padding: 24px;
+        }
+        .item:hover{
+            transform:translateY(-6px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .info h3{
+            font-size:19px;
+            color:#222;
+            margin-bottom:10px;
+        }
+        .info p{
+            font-size:14px;
+            color:#666;
+            margin-bottom:20px;
+            line-height:1.5;
+        }
+        .btn-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn{
+            display:inline-block;
+            padding:10px 24px;
+            background:#2d81ff;
+            color:#fff;
+            border-radius:30px;
+            text-decoration:none;
+            font-size:15px;
+            font-weight:500;
+            white-space: nowrap;
+        }
+        .code-wrap{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            font-size:14px;
+        }
+        .code-text{
+            color:#555;
+        }
+        .code{
+            font-family: monospace;
+            font-weight:bold;
+            color:#222;
+        }
+        .copy-btn{
+            padding:4px 10px;
+            background:#e5e7eb;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            font-size:13px;
+        }
+        .copy-btn:hover{
+            background:#d1d5db;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="top">
+        <h1>王喆的摄影作品集</h1>
+        <p>个人摄影 / 短片 / 纪录片作品合集</p>
+    </div>
+
+    <div class="list">
+
+        <!-- 作品1：作品合集 -->
+        <div class="item">
+            <div class="info">
+                <h3>作品合集</h3>
+                <p>showreel 个人摄影作品合集</p>
+                <div class="btn-group">
+                    <a class="btn" href="https://pan.baidu.com/s/1t9d6b6TEt4tz5Hddz_RgoA" target="_blank">立即观看</a>
+                    <div class="code-wrap">
+                        <span class="code-text">提取码：</span>
+                        <span class="code" data-code="mne7">mne7</span>
+                        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 作品2：纪录片预告片 -->
+        <div class="item">
+            <div class="info">
+                <h3>纪录片预告片</h3>
+                <p>巴尔的摩红军 预告片</p>
+                <div class="btn-group">
+                    <a class="btn" href="https://pan.baidu.com/s/1q0ee7QuAExtxAeAEErAmhQ" target="_blank">立即观看</a>
+                    <div class="code-wrap">
+                        <span class="code-text">提取码：</span>
+                        <span class="code" data-code="jedp">jedp</span>
+                        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 作品3：悬疑短片 -->
+        <div class="item">
+            <div class="info">
+                <h3>悬疑短片</h3>
+                <p>悬疑类完整短片作品</p>
+                <div class="btn-group">
+                    <a class="btn" href="https://pan.baidu.com/s/1EAcR4entMmqEA-NkNbsH7A" target="_blank">立即观看</a>
+                    <div class="code-wrap">
+                        <span class="code-text">提取码：</span>
+                        <span class="code" data-code="4imc">4imc</span>
+                        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function copyCode(btn){
+    const code = btn.previousElementSibling.dataset.code;
+    navigator.clipboard.writeText(code).then(()=>{
+        btn.innerText="已复制";
+        setTimeout(()=>{btn.innerText="复制"},2000);
+    })
+}
+</script>
+
+</body>
+</html>
